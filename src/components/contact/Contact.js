@@ -35,7 +35,6 @@ const Contact = (props) => {
       );
       setErrMsg("");
       setUsername("");
-
       setEmail("");
       setMessage("");
     }
@@ -133,7 +132,7 @@ const Contact = (props) => {
                     errMsg === "Message is required!" && "outline-designColor"
                   } contactTextArea`}
                   cols="30"
-                  rows="5"
+                  rows="3"
                 ></textarea>
               </div>
               <div className="w-full">
@@ -144,7 +143,7 @@ const Contact = (props) => {
                   Send Message
                 </button>
               </div>
-              {errMsg && (
+              {/* {errMsg && (
                 <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
                   {errMsg}
                 </p>
@@ -153,11 +152,11 @@ const Contact = (props) => {
                 <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
                   {successMsg}
                 </p>
-              )}
+              )} */}
             </form>
           </div>
         </div>
-        <div className="w-full py-6">
+        <div className="w-full py-20">
           <p className="text-center text-gray-500 text-base">
             © 2022. All rights reserved by Suryansh Soni
           </p>
