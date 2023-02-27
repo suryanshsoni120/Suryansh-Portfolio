@@ -12,7 +12,7 @@ const Navbar = (props) => {
 
   return (
     <>
-      <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
+      <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor dark:bg-white mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600 dark:border-b-black">
         <div>
           <img src={icon} alt="icon" />
         </div>
@@ -40,7 +40,7 @@ const Navbar = (props) => {
             </span>
           </ul> */}
           <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
-            <li className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300">
+            <li className="text-base font-normal text-gray-400 dark:text-slate-400 tracking-wide cursor-pointer hover:text-designColor dark:hover:text-designColor duration-300">
               <Link
                 spy={true}
                 smooth={true}
@@ -53,7 +53,7 @@ const Navbar = (props) => {
                 Home
               </Link>
             </li>
-            <li className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300">
+            <li className="text-base font-normal text-gray-400 dark:text-slate-400 tracking-wide cursor-pointer hover:text-designColor dark:hover:text-designColor duration-300">
               <Link
                 spy={true}
                 smooth={true}
@@ -66,7 +66,7 @@ const Navbar = (props) => {
                 Skills
               </Link>
             </li>
-            <li className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300">
+            <li className="text-base font-normal text-gray-400 dark:text-slate-400 tracking-wide cursor-pointer hover:text-designColor dark:hover:text-designColor duration-300">
               <Link
                 spy={true}
                 smooth={true}
@@ -92,7 +92,7 @@ const Navbar = (props) => {
                 Resume
               </Link>
             </li> */}
-            <li className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300">
+            <li className="text-base font-normal text-gray-400 dark:text-slate-400 tracking-wide cursor-pointer hover:text-designColor dark:hover:text-designColor duration-300">
               <Link
                 spy={true}
                 smooth={true}
@@ -106,7 +106,7 @@ const Navbar = (props) => {
               </Link>
             </li>
             <span onClick={props.toggleTheme}>
-              {props.theme ? (
+              {props.theme === "dark" ? (
                 <MdOutlineLightMode
                   size={28}
                   className="hover:text-designColor duration-300 cursor-pointer"

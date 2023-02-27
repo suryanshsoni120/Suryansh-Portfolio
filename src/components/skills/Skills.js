@@ -13,7 +13,10 @@ import Card from "./Card";
 
 const Skills = (props) => {
   return (
-    <section id="skills" className="w-full py-20 border-b-[1px] border-b-black">
+    <section
+      id="skills"
+      className="w-full py-20 border-b-[1px] border-b-black dark:border-b-white"
+    >
       {/* <Title title="Skills" des="What I Do" /> */}
       <div className="flex justify-center items-center text-center">
         <Title des="Skills" />

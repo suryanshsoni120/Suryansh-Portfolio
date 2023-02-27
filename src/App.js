@@ -12,22 +12,37 @@ import Projects from "./components/projects/Projects";
 function App() {
   const [theme, setTheme] = useState("dark");
 
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      document.documentElement.setAttribute("data-theme", "dark");
-    } else {
-      setTheme("light");
-      document.documentElement.setAttribute("data-theme", "light");
+  useEffect(() => {
+    if (localStorage.getItem("theme") === null) {
+      localStorage.setItem("theme", "light");
     }
-  };
+  }, []);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
+    // select html elem
+    const html = document.querySelector("html");
+    if (localStorage.getItem("theme") === "dark") {
+      html.classList.add("dark");
+      setTheme("dark");
+    } else {
+      html.classList.remove("dark");
+      setTheme("light");
+    }
   }, [theme]);
+
+  // handle switch theme
+  const toggleTheme = () => {
+    if (localStorage.getItem("theme") === "light") {
+      setTheme("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      setTheme("light");
+      localStorage.setItem("theme", "light");
+    }
+  };
   return (
     <>
-      <div className="w-full h-auto bg-bodyColor text-lightText px-4">
+      <div className="w-full h-auto bg-bodyColor dark:bg-white text-lightText px-4">
         <Navbar theme={theme} toggleTheme={toggleTheme} />
         <div className="max-w-screen-xl mx-auto">
           <Banner />

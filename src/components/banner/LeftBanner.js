@@ -18,11 +18,13 @@ const LeftBanner = () => {
   return (
     <div className="w-full lgl:w-1/2 flex flex-col gap-20">
       <div className="flex flex-col gap-5">
-        <h4 className=" text-lg font-normal">WELCOME TO MY PORTFOLIO</h4>
-        <h1 className="text-6xl font-bold text-white">
+        <h4 className="text-lg font-normal dark:text-black">
+          WELCOME TO MY PORTFOLIO
+        </h4>
+        <h1 className="text-6xl font-bold text-white dark:text-black">
           Hi, I'm <span className="text-designColor capitalize">Suryansh</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-4xl font-bold text-white dark:text-black">
           <span>{text}</span>
           <Cursor
             cursorBlinking="false"
@@ -30,7 +32,7 @@ const LeftBanner = () => {
             cursorColor="#ff014f"
           />
         </h2>
-        <p className="text-base font-bodyFont leading-6 tracking-wide">
+        <p className="text-base font-bodyFont leading-6 tracking-wide dark:text-black">
           I use animation as a third dimension by which to simplify experiences
           and kuiding thro each and every interaction. I'm not adding motion
           just to spruce things up, but doing it in ways that.
@@ -38,7 +40,7 @@ const LeftBanner = () => {
       </div>
       <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
         <div>
-          <h2 className="text-base uppercase font-titleFont mb-4">
+          <h2 className="text-base uppercase font-titleFont mb-4 dark:text-black">
             Find me on
           </h2>
           <div className="flex gap-4">
