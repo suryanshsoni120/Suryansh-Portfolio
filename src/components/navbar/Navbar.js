@@ -106,7 +106,7 @@ const Navbar = (props) => {
               </Link>
             </li>
             <span onClick={props.toggleTheme}>
-              {props.theme === "dark" ? (
+              {props.theme === "light" ? (
                 <MdOutlineLightMode
                   size={28}
                   className="hover:text-designColor duration-300 cursor-pointer"
