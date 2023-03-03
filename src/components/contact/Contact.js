@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Title from "../layouts/Title";
 import ContactLeft from "./ContactLeft";
 
@@ -10,6 +11,12 @@ const Contact = (props) => {
   const [message, setMessage] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
+
+  // const service_id = process.env.REACT_APP_SERVICE_ID;
+  // const template_id = process.env.REACT_APP_TEMPLATE_ID;
+  // const user_id = process.env.REACT_APP_USER_ID;
+
+  const form = useRef();
 
   // ========== Email Validation start here ==============
   const emailValidation = () => {
@@ -30,15 +37,37 @@ const Contact = (props) => {
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
-      setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
-      );
+      emailjs
+        .sendForm(
+          "service_w2o5wxe",
+          "contact_form",
+          form.current,
+          "yNst1ZWTVi8DYl4vK"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+      setSuccessMsg(`Your Message has been sent Successfully!`);
       setErrMsg("");
       setUsername("");
       setEmail("");
       setMessage("");
     }
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setErrMsg("");
+      setSuccessMsg("");
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, [errMsg, successMsg]);
+
   return (
     <section
       id="contact"
@@ -52,14 +81,18 @@ const Contact = (props) => {
         <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
           <ContactLeft />
           <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] dark:bg-gradient-to-r dark:from-white dark:to-white flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne dark:shadow-slate-300">
-            <form className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5">
+            <form
+              ref={form}
+              onSubmit={handleSend}
+              className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5"
+            >
               {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne dark:shadow-slate-300 text-center text-orange-500 text-base tracking-wide animate-bounce">
+                <p className="text-center text-orange-500 text-base tracking-wide animate-bounce">
                   {errMsg}
                 </p>
               )}
               {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne dark:shadow-slate-300 text-center text-green-500 text-base tracking-wide animate-bounce">
+                <p className="text-center text-green-500 text-base tracking-wide animate-bounce">
                   {successMsg}
                 </p>
               )}
@@ -76,6 +109,7 @@ const Contact = (props) => {
                       "outline-designColor"
                     } contactInput`}
                     type="text"
+                    name="user_name"
                   />
                 </div>
                 {/* <div className="w-full lgl:w-1/2 flex flex-col gap-4">
@@ -105,6 +139,7 @@ const Contact = (props) => {
                     "outline-designColor"
                   } contactInput`}
                   type="email"
+                  name="user_email"
                 />
               </div>
               {/* <div className="flex flex-col gap-4">
@@ -133,6 +168,7 @@ const Contact = (props) => {
                   } contactTextArea`}
                   cols="30"
                   rows="3"
+                  name="message"
                 ></textarea>
               </div>
               <div className="w-full">
@@ -143,22 +179,15 @@ const Contact = (props) => {
                   Send Message
                 </button>
               </div>
-              {/* {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
-              )} */}
             </form>
           </div>
         </div>
-        <div className="w-full py-20">
-          <p className="text-center text-gray-500 text-base">
+        <div className="w-full py-10">
+          {/* <p className="text-center text-gray-500 text-base">
             © 2022. All rights reserved by Suryansh Soni
+          </p> */}
+          <p className="text-center text-xl text-gray-500">
+            Made With ❤️ By Suryansh Soni
           </p>
         </div>
       </div>

@@ -12,7 +12,7 @@ const Navbar = (props) => {
 
   return (
     <>
-      <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor dark:bg-white mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600 dark:border-b-black">
+      <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor dark:bg-white mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600 dark:border-b-slate-300">
         <div>
           <img src={icon} alt="icon" />
         </div>
@@ -35,9 +35,6 @@ const Navbar = (props) => {
                 </Link>
               </li>
             ))}
-            <span onClick={props.toggleDarkMode}>
-              {props.isDarkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
-            </span>
           </ul> */}
           <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
             <li className="text-base font-normal text-gray-400 dark:text-slate-400 tracking-wide cursor-pointer hover:text-designColor dark:hover:text-designColor duration-300">
@@ -79,19 +76,6 @@ const Navbar = (props) => {
                 Projects
               </Link>
             </li>
-            {/* <li className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300">
-              <Link
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                className="nav-link"
-                activeClass="active"
-                to="resume"
-              >
-                Resume
-              </Link>
-            </li> */}
             <li className="text-base font-normal text-gray-400 dark:text-slate-400 tracking-wide cursor-pointer hover:text-designColor dark:hover:text-designColor duration-300">
               <Link
                 spy={true}

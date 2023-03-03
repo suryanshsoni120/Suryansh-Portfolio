@@ -8,6 +8,7 @@ import {
   SiReact,
   SiNextdotjs,
 } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
 import Title from "../layouts/Title";
 import Card from "./Card";
 
@@ -15,7 +16,7 @@ const Skills = (props) => {
   return (
     <section
       id="skills"
-      className="w-full py-20 border-b-[1px] border-b-black dark:border-b-white"
+      className="w-full py-20 border-b-black dark:border-b-white"
     >
       {/* <Title title="Skills" des="What I Do" /> */}
       <div className="flex justify-center items-center text-center">
@@ -56,6 +57,12 @@ const Skills = (props) => {
           des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           hic consequuntur eum repellendus ad."
           icon={<SiNextdotjs />}
+        />
+        <Card
+          title="MySQL"
+          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
+          hic consequuntur eum repellendus ad."
+          icon={<GrMysql />}
         />
         <Card
           title="Java"
