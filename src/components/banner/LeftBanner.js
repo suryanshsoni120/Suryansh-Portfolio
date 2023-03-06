@@ -1,6 +1,6 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 // import { SiTailwindcss, SiFigma, SiNextdotjs } from "react-icons/si";
 
 const LeftBanner = () => {
@@ -33,9 +33,13 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide dark:text-black">
-          I use animation as a third dimension by which to simplify experiences
+          {/* I use animation as a third dimension by which to simplify experiences
           and kuiding thro each and every interaction. I'm not adding motion
-          just to spruce things up, but doing it in ways that.
+          just to spruce things up, but doing it in ways that. */}
+          I am a Full Stack Developer with a passion for learning new
+          technologies and building scalable applications. Dedicated,
+          knowledgeable student having technological expertise, well-developed
+          communication skills and ability to perform well in teams.
         </p>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
@@ -46,11 +50,11 @@ const LeftBanner = () => {
           <div className="flex gap-4">
             <span className="bannerIcon">
               <a
-                href="https://www.instagram.com/surisoni10/"
+                href="https://github.com/suryanshsoni120"
                 target="_blank"
                 rel="noreferrer"
               >
-                <FaInstagram />
+                <FaGithub />
               </a>
             </span>
             <span className="bannerIcon">

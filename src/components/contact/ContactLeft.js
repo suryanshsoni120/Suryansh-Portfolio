@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import { contactImg } from "../../assets/index";
 
 const ContactLeft = () => {
@@ -35,11 +35,11 @@ const ContactLeft = () => {
         <div className="flex gap-4">
           <span className="bannerIcon">
             <a
-              href="https://www.instagram.com/surisoni10/"
+              href="https://github.com/suryanshsoni120"
               target="_blank"
               rel="noreferrer"
             >
-              <FaInstagram />
+              <FaGithub />
             </a>
           </span>
           <span className="bannerIcon">
