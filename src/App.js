@@ -8,6 +8,7 @@ import Navbar from "./components/navbar/Navbar";
 import Projects from "./components/projects/Projects";
 // import Resume from "./components/resume/Resume";
 // import Testimonial from "./components/tesimonial/Testimonial";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -50,6 +51,7 @@ function App() {
           <Projects />
           {/* <Resume /> */}
           {/* <Testimonial /> */}
+          <ScrollToTop />
           <Contact />
           {/* <Footer /> */}
           {/* <FooterBottom /> */}
