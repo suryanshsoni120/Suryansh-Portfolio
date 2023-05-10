@@ -10,8 +10,11 @@ import {
   SiReact,
   SiNextdotjs,
   SiNodedotjs,
+  SiCplusplus,
+  SiPython,
   SiSpring,
   SiSpringboot,
+  SiFlutter,
   SiGit,
   SiGithub,
   SiDocker,
@@ -25,7 +28,7 @@ const Skills = (props) => {
   return (
     <section
       id="skills"
-      className="w-full py-10 border-b-black dark:border-b-white"
+      className="w-full py-16 border-b-black dark:border-b-white"
     >
       {/* <Title title="Skills" des="What I Do" /> */}
       <div className="flex justify-center items-center text-center">
@@ -61,43 +64,61 @@ const Skills = (props) => {
           // hic consequuntur eum repellendus ad."
           icon={<SiJavascript />}
         />
-        <Card
+        {/* <Card
           title="TypeScript"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<SiTypescript />}
-        />
+        /> */}
         <Card
           title="ReactJS"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<SiReact />}
         />
-        <Card
+        {/* <Card
           title="NextJS"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<SiNextdotjs />}
-        />
+        /> */}
         <Card
           title="NodeJS"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<SiNodedotjs />}
         />
-        <Card
+        {/* <Card
           title="React Native"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<TbBrandReactNative />}
+        /> */}
+        <Card
+          title="Flutter"
+          // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
+          // hic consequuntur eum repellendus ad."
+          icon={<SiFlutter />}
         />
+        <Card
+          title="C++"
+          // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
+          // hic consequuntur eum repellendus ad."
+          icon={<SiCplusplus />}
+        />
+        {/* <Card
+          title="Python"
+          // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
+          // hic consequuntur eum repellendus ad."
+          icon={<SiPython />}
+        /> */}
         <Card
           title="Java"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<FaJava />}
         />
-        <Card
+        {/* <Card
           title="Spring"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
@@ -108,19 +129,19 @@ const Skills = (props) => {
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<SiSpringboot />}
-        />
+        /> */}
         <Card
           title="MySQL"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<GrMysql />}
         />
-        <Card
+        {/* <Card
           title="Docker"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<SiDocker />}
-        />
+        /> */}
         <Card
           title="Git"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
