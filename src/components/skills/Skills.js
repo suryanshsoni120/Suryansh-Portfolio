@@ -14,7 +14,6 @@ import {
   SiPython,
   SiSpring,
   SiSpringboot,
-  SiFlutter,
   SiGit,
   SiGithub,
   SiDocker,
@@ -35,11 +34,6 @@ const Skills = (props) => {
         <Title des="Skills" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-6 gap-6 xl:gap-10">
-        {/* <Card
-          title="Business Stratagy"
-          des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
-          hic consequuntur eum repellendus ad."
-        /> */}
         <Card
           title="HTML5"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
@@ -95,23 +89,17 @@ const Skills = (props) => {
           icon={<TbBrandReactNative />}
         /> */}
         <Card
-          title="Flutter"
-          // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
-          // hic consequuntur eum repellendus ad."
-          icon={<SiFlutter />}
-        />
-        <Card
           title="C++"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<SiCplusplus />}
         />
-        {/* <Card
+        <Card
           title="Python"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
           // hic consequuntur eum repellendus ad."
           icon={<SiPython />}
-        /> */}
+        />
         <Card
           title="Java"
           // des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque soluta
