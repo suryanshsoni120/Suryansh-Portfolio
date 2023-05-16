@@ -21,7 +21,7 @@ const Projects = () => {
           title="Text Editor"
           des="A text editor built using Java. It has features like cut, copy, paste, undo, redo, find, replace, select all, word wrap, font size, font style, font color, and background color."
           src={texteditor}
-          code_link="https://github.com/suryanshsoni120/NewsDaily-website"
+          code_link="https://github.com/suryanshsoni120/Text-Editor"
         />
         <ProjectsCard
           title="NewsDaily Website"
