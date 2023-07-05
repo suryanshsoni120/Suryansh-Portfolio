@@ -14,26 +14,13 @@ const ContactLeft = () => {
         <h3 className="text-3xl font-bold text-white dark:text-black">
           Suryansh Soni
         </h3>
-        {/* <p className="text-lg font-normal text-gray-400">
-          MERN Stack Developer
-        </p> */}
-        {/* <p className="text-base text-gray-400 tracking-wide">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis
-          ipsam autem cumque, accusantium dicta odio.
-        </p> */}
-        {/* <p className="text-base text-gray-400 flex items-center gap-2">
-          Phone: <span className="text-lightText">+968 97859628</span>
-        </p> */}
-        {/* <p className="text-base text-gray-400 flex items-center gap-2">
-          Email: <span className="text-lightText">surisoni10@gmail.com</span>
-        </p> */}
       </div>
       <div className="flex flex-col gap-4">
         <h2 className="text-base uppercase font-titleFont dark:text-black">
           Find me on
         </h2>
         <div className="flex gap-4">
-          <span className="bannerIcon">
+          <span className="w-16 h-16 bg-black dark:bg-white bg-opacity-25 text-gray-200 dark:text-black text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne dark:shadow-slate-300 hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor dark:hover:text-designColor cursor-pointer duration-300">
             <a
               href="https://github.com/suryanshsoni120"
               target="_blank"
@@ -42,7 +29,7 @@ const ContactLeft = () => {
               <FaGithub />
             </a>
           </span>
-          <span className="bannerIcon">
+          <span className="w-16 h-16 bg-black dark:bg-white bg-opacity-25 text-gray-200 dark:text-black text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne dark:shadow-slate-300 hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor dark:hover:text-designColor cursor-pointer duration-300">
             <a
               href="https://twitter.com/surisoni10"
               target="_blank"
@@ -51,7 +38,7 @@ const ContactLeft = () => {
               <FaTwitter />
             </a>
           </span>
-          <span className="bannerIcon">
+          <span className="w-16 h-16 bg-black dark:bg-white bg-opacity-25 text-gray-200 dark:text-black text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne dark:shadow-slate-300 hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor dark:hover:text-designColor cursor-pointer duration-300">
             <a
               href="https://www.linkedin.com/in/surisoni/"
               target="_blank"

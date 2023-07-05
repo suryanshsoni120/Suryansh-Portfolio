@@ -1,14 +1,13 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa";
-// import { SiTailwindcss, SiFigma, SiNextdotjs } from "react-icons/si";
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
     words: [
       "an Open Source Contributor.",
       "a Full Stack Developer.",
-      "a Java Developer.",
+      // "a Java Developer.",
     ],
     loop: true,
     typeSpeed: 20,
@@ -33,9 +32,6 @@ const LeftBanner = () => {
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide dark:text-black">
-          {/* I use animation as a third dimension by which to simplify experiences
-          and kuiding thro each and every interaction. I'm not adding motion
-          just to spruce things up, but doing it in ways that. */}
           I am a Full Stack Developer with a passion for learning new
           technologies and building scalable applications. Dedicated,
           knowledgeable student having technological expertise, well-developed
@@ -48,7 +44,7 @@ const LeftBanner = () => {
             Find me on
           </h2>
           <div className="flex gap-4">
-            <span className="bannerIcon">
+            <span className="w-16 h-16 bg-black dark:bg-white bg-opacity-25 text-gray-200 dark:text-black text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne dark:shadow-slate-300 hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor dark:hover:text-designColor cursor-pointer duration-300">
               <a
                 href="https://github.com/suryanshsoni120"
                 target="_blank"
@@ -57,7 +53,7 @@ const LeftBanner = () => {
                 <FaGithub />
               </a>
             </span>
-            <span className="bannerIcon">
+            <span className="w-16 h-16 bg-black dark:bg-white bg-opacity-25 text-gray-200 dark:text-black text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne dark:shadow-slate-300 hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor dark:hover:text-designColor cursor-pointer duration-300">
               <a
                 href="https://twitter.com/surisoni10"
                 target="_blank"
@@ -66,7 +62,7 @@ const LeftBanner = () => {
                 <FaTwitter />
               </a>
             </span>
-            <span className="bannerIcon">
+            <span className="w-16 h-16 bg-black dark:bg-white bg-opacity-25 text-gray-200 dark:text-black text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne dark:shadow-slate-300 hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor dark:hover:text-designColor cursor-pointer duration-300">
               <a
                 href="https://www.linkedin.com/in/surisoni/"
                 target="_blank"
@@ -77,25 +73,6 @@ const LeftBanner = () => {
             </span>
           </div>
         </div>
-        {/* <div>
-          <h2 className="text-base uppercase font-titleFont mb-4">
-            BEST SKILL ON
-          </h2>
-          <div className="flex gap-4">
-            <span className="bannerIcon">
-              <FaReact />
-            </span>
-            <span className="bannerIcon">
-              <SiNextdotjs />
-            </span>
-            <span className="bannerIcon">
-              <SiTailwindcss />
-            </span>
-            <span className="bannerIcon">
-              <SiFigma />
-            </span>
-          </div>
-        </div> */}
       </div>
     </div>
   );

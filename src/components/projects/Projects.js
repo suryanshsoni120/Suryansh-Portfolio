@@ -1,6 +1,12 @@
 import React from "react";
 import Title from "../layouts/Title";
-import { newsdaily, texteditor, portfolio } from "../../assets/index";
+import {
+  newsdaily,
+  texteditor,
+  portfolio,
+  blog,
+  chat,
+} from "../../assets/index";
 import ProjectsCard from "./ProjectsCard";
 
 const Projects = () => {
@@ -10,13 +16,30 @@ const Projects = () => {
       className="w-full py-20 border-b-black dark:border-b-white"
     >
       <div className="flex justify-center items-center text-center">
-        <Title des="My Projects" />
-        {/* <Title
-          title="VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK"
-          des="My Projects"
-        /> */}
+        <Title des="Projects" />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 xl:gap-14">
+        <ProjectsCard
+          title="Javascript Journeys"
+          des="This is my blog website. It is a single page application built using NextJS. It is a responsive website that can be viewed on any device. It is hosted on Vercel."
+          src={blog}
+          code_link="https://github.com/suryanshsoni120/React-Portfolio"
+          demo_link="https://js-journeys.vercel.app"
+        />
+        <ProjectsCard
+          title="ChitChat"
+          des="This is a chat application built using ReactJS and Appwrite. It is a responsive website that can be viewed on any device. It is hosted on Vercel."
+          src={chat}
+          code_link="https://github.com/suryanshsoni120/React-Portfolio"
+          demo_link="https://letschitchat.vercel.app"
+        />
+        <ProjectsCard
+          title="Portfolio Website"
+          des="This is my portfolio website. It is a single page application built using ReactJS. It is a responsive website that can be viewed on any device. It is hosted on Vercel."
+          src={portfolio}
+          code_link="https://github.com/suryanshsoni120/React-Portfolio"
+          demo_link="https://suryanshsoniportfolio.vercel.app"
+        />
         <ProjectsCard
           title="Text Editor"
           des="A text editor built using Java. It has features like cut, copy, paste, undo, redo, find, replace, select all, word wrap, font size, font style, font color, and background color."
@@ -29,31 +52,6 @@ const Projects = () => {
           src={newsdaily}
           code_link="https://github.com/suryanshsoni120/NewsDaily-website"
         />
-        <ProjectsCard
-          title="Portfolio Website"
-          des="This is my portfolio website. It is a single page application built using React. It is a responsive website that can be viewed on any device. It is hosted on Vercel."
-          src={portfolio}
-          code_link="https://github.com/suryanshsoni120/React-Portfolio"
-          demo_link="https://suryansh-soni-portfolio.vercel.app/"
-        />
-        {/* <ProjectsCard
-          title="E-commerce Website"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectTwo}
-        /> */}
-        {/* <ProjectsCard
-          title="Chatting App"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectThree}
-        /> */}
-        {/* <ProjectsCard
-          title="SOCIAL MEDIA CLONE"
-          des=" Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Explicabo quibusdam voluptate sapiente voluptatibus harum quidem!"
-          src={projectThree}
-        /> */}
       </div>
     </section>
   );
